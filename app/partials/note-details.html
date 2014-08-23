@@ -1,0 +1,13 @@
+<form role="form">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" ng-model="note.title">
+  </div>
+  <div class="form-group">
+    <label for="Body">Body</label>
+    <textarea class="form-control" rows="10" id="body" ng-model="note.body"></textarea>
+  </div>
+  <div>    
+    <button ng-click="save()" class="btn btn-default">Save</button>
+  </div>
+</form>  

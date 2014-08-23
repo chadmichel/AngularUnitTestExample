@@ -1,0 +1,22 @@
+
+<button ng-click="newNote()" class="btn btn-default">New</button>
+
+<table class="table table-striped">
+
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Date</th>
+		</tr>
+	</thead>
+
+
+	<tr ng-repeat="note in notes track by $index">
+
+		<td><a href="#/note/{{note.id}}">{{note.title}}</a></td>
+		<td>{{note.date | date:dateFormat}}</td>
+
+	</tr>
+
+</table>
+

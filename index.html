@@ -1,0 +1,36 @@
+<html ng-app="noteApp">
+
+<head>
+
+<title>CHADS NOTES</title>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+
+</head>
+
+
+<body>
+
+	<div ng-view></div>
+
+
+	<!-- app level -->
+	<script src="app/js/app.js"></script>
+
+	<!-- individual accessors -->
+	<script src="app/js/accessors/guid.js"></script>
+	<script src="app/js/accessors/clientnoteaccessor.js"></script>
+
+	<!-- individual controllers -->
+	<script src="app/js/controllers/listctrl.js"></script>
+	<script src="app/js/controllers/detailsctrl.js"></script>
+
+</body>
+
+</html>
