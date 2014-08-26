@@ -1,0 +1,9 @@
+{
+  "name": "Angular-Unit-Test-App",
+  "description": "Angular Unit Test App",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.x"
+  }
+}
