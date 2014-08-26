@@ -42,7 +42,7 @@ describe('Client Note Accessor', function(){
 				$rootScope.$apply(function() {
 					should.exist(clientNoteAccessor);
 				
-					clientNoteAccessor.seed([]]);
+					clientNoteAccessor.seed([]);
 
 					var note = {id: "1", title: "note 1", body: "body 1", date: new Date() };
 
