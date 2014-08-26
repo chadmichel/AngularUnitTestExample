@@ -6,6 +6,7 @@ module.exports = function(config) {
       'bower_components/angular-mocks/angular-mocks.js',
       'app/js/*.js',
       'app/js/accessors/*.js',
+      'app/js/controllers/*.js',
       'test/unit/**/*.js'
     ],
     basePath: '../',
@@ -13,7 +14,7 @@ module.exports = function(config) {
     reporters: ['progress', 'html'],
     browsers: ['Chrome'],
     autoWatch: true,
-    singleRun: false,
+    singleRun: true,
     colors: true,
   });
 };
