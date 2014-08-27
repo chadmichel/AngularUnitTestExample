@@ -1,5 +1,5 @@
 var noteApp = angular.module('noteApp', [
-  'ngRoute'
+  'ngRoute', 'textAngular'
 ]);
 
 noteApp.config(['$routeProvider',
