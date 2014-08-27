@@ -5,7 +5,7 @@
   </div>
   <div class="form-group">
     <label for="Body">Body</label>
-    <text-angular id="body" ng-model="note.body"></text-angular>
+    <text-angular id="body" ng-model="note.body" ta-toolbar="[['bold','italics', 'underline'],['ul','ol'],['undo','redo','clear'],['justifyLeft','justifyCenter','justifyRight']]"></text-angular>
   </div>
   <div>    
     <button ng-click="save()" class="btn btn-default">Save</button>
