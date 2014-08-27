@@ -26,5 +26,11 @@ angular.module("noteApp").controller('DetailsCtrl', ['$scope', '$routeParams', '
 		});
 	};
 	
+	$scope.back = function() {
+		clientNoteAccessor.save($scope.note).then(function (result) {
+			$location.path("/list");
+		});
+	};
+
 }]);
 
