@@ -24,9 +24,7 @@ describe('Client Note Accessor', function(){
 						assert.equal(items.length, 2);
 						done();
 					});
-
-				});
-				
+				});				
 			});
 		});
 	});
@@ -40,20 +38,49 @@ describe('Client Note Accessor', function(){
 				// VERY VERY VERY IMPORTANT
 				// YOU MUST PUT ACTUAL UNIT TEST INSIDE OF A $scope.$apply
 				$rootScope.$apply(function() {
-					should.exist(clientNoteAccessor);
-				
-					clientNoteAccessor.seed([]]);
+									
+					clientNoteAccessor.seed([]);
 
 					var note = {id: "1", title: "note 1", body: "body 1", date: new Date() };
 
 					clientNoteAccessor.save(note).then(function(result) {
 						should.exist(result);						
-						done();
-					});
 
-				});
-				
+						clientNoteAccessor.list().then(function(listItems) {
+							should.exist(listItems);
+							assert.equal(1, listItems.length);
+							done();
+						});
+					});
+				});				
 			});
 		});
 	});
-})
+
+	describe('save/find', function(){
+		it('should save item and we should be able load item', function(done) {
+
+			inject(function(clientNoteAccessor, $timeout, $rootScope) {
+
+				// VERY VERY VERY IMPORTANT
+				// YOU MUST PUT ACTUAL UNIT TEST INSIDE OF A $scope.$apply
+				$rootScope.$apply(function() {
+									
+					clientNoteAccessor.seed([]);
+
+					var note = {id: "1", title: "note 1", body: "body 1", date: new Date() };
+
+					clientNoteAccessor.save(note).then(function(result) {
+						should.exist(result);			
+
+						clientNoteAccessor.find(note.id).then(function(loaded) {
+							should.exist(loaded);			
+							assert.equal(loaded.title, note.title);
+							done();
+						});								
+					});
+				});				
+			});
+		});
+	});
+});

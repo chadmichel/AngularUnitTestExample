@@ -24,7 +24,7 @@ angular.module("noteApp").service('clientNoteAccessor', ['$rootScope', '$q', 'gu
 		}
 
 		self.seed = function(seedNotes) {
-
+			localStorage.clear();
 			localStorage[listKey] = null;
 			self.notes = seedNotes;
 			self.saveList();
