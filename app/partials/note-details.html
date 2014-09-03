@@ -1,14 +1,37 @@
+
+<div class="col-md-6">
+
+<table class="table">
+
+<tr>
+<td>Note 1</td>
+</tr>
+
+<tr>
+<td>Note 2</td>
+</tr>
+
+</table>
+
+
+</div>
+
+<div  class="col-md-6">
+
 <form role="form">
   <div class="form-group">
-    <label for="title">Title</label>
-    <input type="text" class="form-control" id="title" ng-model="note.title">
+    
+    <input type="text" class="form-control" id="title" ng-model="note.title" placeholder="title">
   </div>
   <div class="form-group">
-    <label for="Body">Body</label>
-    <text-angular id="body" ng-model="note.body" ta-toolbar="[['bold','italics', 'underline'],['ul','ol'],['undo','redo','clear'],['justifyLeft','justifyCenter','justifyRight']]"></text-angular>
+    
+    <text-angular id="body" ng-model="note.body" ta-toolbar="[['bold','italics', 'underline'],['ul','ol'],['undo','redo','clear'],['justifyLeft','justifyCenter','justifyRight']]" placeholder="body"></text-angular>
   </div>
-  <div>    
+
+    <div>    
     <button ng-click="save()" class="btn btn-primary">Save</button>
-    <button ng-click="back()" class="btn">Back</button>
   </div>
+
 </form>  
+
+</div>
