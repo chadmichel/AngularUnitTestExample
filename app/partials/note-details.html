@@ -3,13 +3,12 @@
 
 <table class="table">
 
-<tr>
-<td>Note 1</td>
-</tr>
+  <tr ng-repeat="note in notes track by $index">
 
-<tr>
-<td>Note 2</td>
-</tr>
+    <td><a href="#/note/{{note.id}}">{{note.title == "" ? "no title" : note.title}}</a></td>
+    <td>{{note.date | date:dateFormat}}</td>
+
+  </tr>
 
 </table>
 

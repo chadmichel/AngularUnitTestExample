@@ -1,5 +1,11 @@
 
 angular.module("noteApp").controller('DetailsCtrl', ['$scope', '$routeParams', '$rootScope', '$location', 'clientNoteAccessor', function ($scope, $routeParams, $rootScope, $location, clientNoteAccessor) {
+
+	$scope.notes = [];
+
+	clientNoteAccessor.list().then(function(items) {
+		$scope.notes = items;
+	});
 		
 	function setBlankNote() {
 		$scope.note = {
