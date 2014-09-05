@@ -13,6 +13,7 @@ angular.module("noteApp").service('clientNoteAccessor', ['$rootScope', '$q', 'gu
 		function copy(source, dest) {
 			dest.id = source.id;
 			dest.title = source.title;			
+			dest.date = source.date;
 		}
 
 		function makeAsync(f) {
