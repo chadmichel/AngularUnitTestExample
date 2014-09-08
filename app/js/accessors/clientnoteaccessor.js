@@ -1,5 +1,7 @@
 
-angular.module("noteApp").service('clientNoteAccessor', ['$rootScope', '$q', 'guid', function($rootScope, $q, guid) {
+angular.module("noteApp").service('clientNoteAccessor', 
+	['$rootScope', '$q', 'guid', 'makeAysnc',
+	function($rootScope, $q, guid, makeAsync) {
 
 	var listKey = "notes_list.json";
 	var itemKey = "note_";
@@ -14,14 +16,6 @@ angular.module("noteApp").service('clientNoteAccessor', ['$rootScope', '$q', 'gu
 			dest.id = source.id;
 			dest.title = source.title;			
 			dest.date = source.date;
-		}
-
-		function makeAsync(f) {
-			setTimeout(function() {
-				$rootScope.$apply(function() {
-					f();
-				});
-			}, 0);
 		}
 
 		self.seed = function(seedNotes) {
