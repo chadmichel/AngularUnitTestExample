@@ -9,9 +9,9 @@ noteApp.config(['$routeProvider',
         templateUrl: 'app/partials/note-details.html',
         controller: 'DetailsCtrl'
       }).
-      when('/configure', {
+      when('/config', {
         templateUrl: 'app/partials/configure.html',
-        controller: 'DetailsCtrl'
+        controller: 'ConfigureCtrl'
       }).
       otherwise({
         redirectTo: '/note/new'

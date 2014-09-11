@@ -1,0 +1,10 @@
+<table class="table">
+
+  <tr ng-repeat="config in configList track by $index">
+
+    <td><a href="#/config/{{config.id}}">{{config.name}}</a></td>
+    <td>{{config.type}}</td>    
+
+  </tr>
+
+</table>
